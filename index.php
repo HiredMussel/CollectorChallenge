@@ -1,10 +1,29 @@
-<?php
+<head>
+    <title>My Games</title>
+</head>
 
-// This is currently a debug page to test the functionality of the "print card" function. Styling will be applied via
-// a stylesheet later
+<body>
 
-require_once 'Card.php';
+    <nav>
 
-$cardTest = new Card('Test Card', ['Test Key' => 'Test Value']);
+        <div class=links>
+            <!-- Link goes nowhere for now, but will eventually link to the "add game" functionality -->
+            <a href="#">Dummy Link</a>
+        </div>
 
-$cardTest->printCard();
+    </nav>
+
+    <?php
+
+        // This is currently a debug page to test the functionality of the "print card" function. Styling will be applied via
+        // a stylesheet later
+
+        require_once 'Card.php';
+
+        $cardTest = new Card('Test Card', ['Test Key' => 'Test Value']);
+
+        $cardTest->printCard();
+
+    ?>
+
+</body>
