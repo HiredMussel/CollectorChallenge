@@ -46,7 +46,7 @@
 
             // Change evaluated condition in for loop to generate desired number of test cards
             $cardTest = [];
-            for ($i = 0; $i < 8; $i++) {
+            for ($i = 0; $i < 10; $i++) {
                 $cardTest[] = new Card('Test Card', ['Test Key' => 'Test Value']);
                 $cardTest[$i]->printCard();
             }
