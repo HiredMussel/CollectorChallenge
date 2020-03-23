@@ -1,0 +1,43 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #999999;
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #111111;
+    padding: 1.2rem;
+    overflow: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #AEAEAE;
+    font-size: 1.4rem;
+    float: right;
+}
+
+nav a:hover,
+nav a:active {
+    color: #FFFFFF;
+}
+
+.itemCard {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    width: 30rem;
+    padding: 1rem;
+    margin: 2rem 0.5rem;
+    opacity: 80%;
+    box-shadow: 0 0 5px #434343;
+}
+
+.container {
+    display: flex;
+    margin: 2.4rem auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
