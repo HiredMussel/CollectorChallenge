@@ -14,7 +14,7 @@
         </div>
 
     </nav>
-    
+
     <div class="container">
         <?php
 
@@ -24,8 +24,12 @@
             require_once 'Card.php';
 
             $cardTest = new Card('Test Card', ['Test Key' => 'Test Value']);
+            $cardTest2 = new Card('Test Card', ['Test Key' => 'Test Value']);
+            $cardTest3 = new Card('Test Card', ['Test Key' => 'Test Value']);
 
             $cardTest->printCard();
+            $cardTest2->printCard();
+            $cardTest3->printCard();
 
         ?>
     </div>
