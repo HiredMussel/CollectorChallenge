@@ -1,0 +1,35 @@
+body {
+    background-color: #999999;
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #111111;
+    padding: 1.2rem;
+    overflow: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #AEAEAE;
+    font-size: 1.4rem;
+    float: right;
+}
+
+nav a:hover,
+nav a:active {
+    color: #FFFFFF;
+}
+
+.itemCard {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    margin: 2.4rem auto;
+    justify-content: space-around;
+}

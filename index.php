@@ -1,5 +1,7 @@
 <head>
     <title>My Games</title>
+    <link rel="stylesheet" type="text/css" href="normalise.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -12,18 +14,19 @@
         </div>
 
     </nav>
+    
+    <div class="container">
+        <?php
 
-    <?php
+            // This is currently a debug page to test the functionality of the "print card" function. Styling will be applied via
+            // a stylesheet later
 
-        // This is currently a debug page to test the functionality of the "print card" function. Styling will be applied via
-        // a stylesheet later
+            require_once 'Card.php';
 
-        require_once 'Card.php';
+            $cardTest = new Card('Test Card', ['Test Key' => 'Test Value']);
 
-        $cardTest = new Card('Test Card', ['Test Key' => 'Test Value']);
+            $cardTest->printCard();
 
-        $cardTest->printCard();
-
-    ?>
-
+        ?>
+    </div>
 </body>
