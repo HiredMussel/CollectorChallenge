@@ -23,13 +23,12 @@
 
             require_once 'Card.php';
 
-            $cardTest = new Card('Test Card', ['Test Key' => 'Test Value']);
-            $cardTest2 = new Card('Test Card', ['Test Key' => 'Test Value']);
-            $cardTest3 = new Card('Test Card', ['Test Key' => 'Test Value']);
-
-            $cardTest->printCard();
-            $cardTest2->printCard();
-            $cardTest3->printCard();
+            // Change evaluated condition in for loop to generate desired number of test cards
+            $cardTest = [];
+            for ($i = 0; $i < 8; $i++) {
+                $cardTest[] = new Card('Test Card', ['Test Key' => 'Test Value']);
+                $cardTest[$i]->printCard();
+            }
 
         ?>
     </div>

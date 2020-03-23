@@ -30,6 +30,7 @@ nav a:active {
     background-color: #FFFFFF;
     width: 30rem;
     padding: 1rem;
+    margin: 2rem 0.5rem;
     opacity: 80%;
     box-shadow: 0 0 5px #434343;
 }
