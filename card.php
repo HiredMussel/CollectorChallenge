@@ -28,6 +28,10 @@ class Card
         $this->attribs = $attribs;
     }
 
+    /** 
+     * Function to print the cards to the page. Since all the cards will have the same styling, all that is necessary is to
+     * assign a class to the containing div for the purposes of CSS styling.
+     */
     public function printCard()
     {
         echo '<div class=itemCard>';
@@ -40,6 +44,9 @@ class Card
         echo '</div>';
     }
 
+    /**
+     * Getters and setters for the item's title
+     */
     public function getTitle () : String
     {
         return $this->title;
@@ -50,6 +57,9 @@ class Card
         $this->title = $newTitle;
     }
 
+    /**
+     * Getters and setters for the item's other attributes
+     */
     public function getAttrib (String $attribName)
     {
         return $this->attribs[$attribName];
