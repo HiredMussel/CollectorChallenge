@@ -1,5 +1,6 @@
 <head>
     <title>My Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="normalise.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
