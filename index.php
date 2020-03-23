@@ -1,6 +1,6 @@
 <?php
 
-require 'Card.php';
+require_once 'Card.php';
 
 $cardTest = new Card('Test Card');
 
