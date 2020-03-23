@@ -35,6 +35,11 @@ nav a:active {
     box-shadow: 0 0 5px #434343;
 }
 
+.itemCard h1,
+.itemCard h2 {
+    text-transform: capitalize;
+}
+
 .container {
     display: flex;
     margin: 2.4rem auto;
