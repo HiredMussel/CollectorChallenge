@@ -28,6 +28,7 @@ function loadCards() : String {
          * 
          * If there are no valid cards in the database, this function will return the empty string.
          */
+        if (is_string($entry['title'])) {
             $cardTitle = $entry['title'];
             unset($entry['title']);
             if (isset($entry['completion'])) {
@@ -35,6 +36,7 @@ function loadCards() : String {
             }
             $card = new Card($cardTitle, $entry);
             $return .= $card->printCard();
+        }
     }
 
     return $return;
