@@ -15,7 +15,7 @@
 
         <div class=links>
 
-            <!-- Link goes nowhere for now, but will eventually link to the "add game" functionality -->
+            <!-- Link takes the user to an input form where they can add details of a new game -->
             <a href="curate.php">Curate Collection</a>
 
         </div>
