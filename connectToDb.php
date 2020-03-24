@@ -5,7 +5,7 @@
  * 
  * @return PDO the database which has been connected to, with the necessary parameter set
  */
-function connectToDb() {
+function connectToDb() : PDO {
     $db = new PDO ('mysql:host=db;dbname=collector_challenge', 'root', 'password');
     $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
