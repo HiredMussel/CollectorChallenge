@@ -21,7 +21,7 @@
 
         <h2>Add new game:</h2>
 
-        <form>
+        <form id="newGame">
             <label for="title">Game Title:</title>
             <input type="text" id="title" name="title">
             <label for="genre">Genre:</title>
@@ -29,7 +29,7 @@
             <label for="completion">Completion:</title>
             <input type="number" min="0" max="255" id="completion" name="completion">%<br>
             <label for="description">Description:</title>
-            <input type="text" id="description" name="description">
+            <textarea id="description" name="description"></textarea>
         </form>
     </div>
 </body>

@@ -80,6 +80,7 @@ input {
     margin-bottom: 1em;
     width: auto;
     border-radius: 5px;
+    border: 1px solid #000000;
 }
 
 #completion {
@@ -88,4 +89,13 @@ input {
 
 label {
     margin-top: 2em;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 1em;
+    width: auto;
+    border-radius: 5px;
+    width: 30rem;
+    height: 10rem;
 }
