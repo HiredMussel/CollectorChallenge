@@ -10,8 +10,8 @@
     <nav>
 
         <div class=links>
-            <!-- Link goes nowhere for now, but will eventually link to the "add game" functionality -->
-            <a href="curate.php">Curate Collection</a>
+            <!-- Link back to homepage -->
+            <a href="index.php">View Collection</a>
         </div>
 
     </nav>
@@ -34,6 +34,17 @@
         </form>
     </div>
     <?php
-        var_dump($_POST);
+        // Logic to allow the result of the form to be added to the database
+        $db = new PDO('mysql:host=db;dbname=collector_challenge', 'root', 'password');
+        $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $query = $db->prepare('INSERT INTO `games` (`title`, `genre`, `completion`, `description`)
+                                VALUES (:title, :genre, :completion, :description);');
+
+        $query->bindParam(':title', $_POST['title']);
+        $query->bindParam(':genre', $_POST['genre']);
+        $query->bindParam(':completion', $_POST['completion']);
+        $query->bindParam(':description', $_POST['description']);
+        $query->execute();
     ?>
 </body>

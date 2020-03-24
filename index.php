@@ -19,12 +19,9 @@
     <div class="container">
         <?php
 
-            // This is currently a debug page to test the functionality of the "print card" function.
-            // Basic styling and layout has now been added, but frontend may still be visually improved later.
-
             require_once 'Card.php';
 
-            // Load test card from database
+            // Load card from database
             $db = new PDO('mysql:host=db;dbname=collector_challenge', 'root', 'password');
             $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
@@ -46,7 +43,7 @@
 
             // Change evaluated condition in for loop to generate desired number of test cards
             $cardTest = [];
-            for ($i = 0; $i < 10; $i++) {
+            for ($i = 0; $i < 0; $i++) {
                 $cardTest[] = new Card('Test Card', ['Test Key' => 'Test Value']);
                 $cardTest[$i]->printCard();
             }
