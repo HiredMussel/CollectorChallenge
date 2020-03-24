@@ -4,7 +4,7 @@ require_once '../Card.php';
 
 use PHPUnit\Framework\TestCase;
 
-class FunctionTest extends TestCase {
+class PrintTest extends TestCase {
     /**
      * Success Test with test input type
      */

@@ -4,7 +4,7 @@ require_once '../Card.php';
 
 use PHPUnit\Framework\TestCase;
 
-class FunctionTest extends TestCase {
+class ConstructTest extends TestCase {
     /**
      * Test that the card type can be constructed successfully. Test both the setting of the title and the card attributes
      */
