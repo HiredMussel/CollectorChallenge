@@ -18,6 +18,7 @@
 
     <div class="curatePage container">
         <h1>Curate Collection</h1>
+        <!-- Declaration of form to add items to db. Items have fields for title, genre, completion, and description -->
 
         <h2>Add new game:</h2>
 
@@ -33,7 +34,9 @@
             <input type="submit" id="submit" name="submit">
         </form>
     <?php
-        // Logic to allow the result of the form to be added to the database
+        /**
+         * Logic to allow the result of the form to be added to the database
+         */
         if (isset($_POST['title'])) {
             $db = new PDO('mysql:host=db;dbname=collector_challenge', 'root', 'password');
             $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
