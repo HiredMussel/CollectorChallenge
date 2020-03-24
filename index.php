@@ -1,8 +1,12 @@
 <head>
+
     <title>My Games</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="normalise.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 
 <body>
@@ -10,13 +14,16 @@
     <nav>
 
         <div class=links>
+
             <!-- Link goes nowhere for now, but will eventually link to the "add game" functionality -->
             <a href="curate.php">Curate Collection</a>
+
         </div>
 
     </nav>
 
     <div class="container">
+
         <?php
 
             require_once 'Card.php';
@@ -45,5 +52,7 @@
                 $card->printCard();
             }
         ?>
+
     </div>
+
 </body>

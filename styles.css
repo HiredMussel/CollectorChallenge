@@ -14,6 +14,7 @@ html {
 
 body {
     background-color: #999999;
+
     font-family: sans-serif;
 }
 
@@ -24,7 +25,9 @@ body {
  */
 nav {
     background-color: #111111;
+
     padding: 1.2rem;
+
     overflow: auto;
 }
 
@@ -32,6 +35,7 @@ nav a {
     text-decoration: none;
     color: #AEAEAE;
     font-size: 1.4rem;
+
     float: right;
 }
 
@@ -45,7 +49,9 @@ nav a:active {
  */
 .container {
     display: flex;
+
     margin: 2.4rem auto;
+
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -56,12 +62,17 @@ nav a:active {
  */
 .itemCard {
     box-sizing: border-box;
-    background-color: #FFFFFF;
     width: 30rem;
-    padding: 1rem;
-    margin: 2rem 0.5rem;
+
+    background-color: #FFFFFF;
     opacity: 80%;
+
+    padding: 1rem;
+
     box-shadow: 0 0 5px #434343;
+
+    margin: 2rem 0.5rem;
+
 }
 
 .itemCard h1,
@@ -74,21 +85,28 @@ nav a:active {
  */
 .curatePage {
     box-sizing: border-box;
-    background-color: #FFFFFF;
+
     width: 100%;
     max-width: 100rem;
-    padding: 1rem;
-    margin: 2rem auto;
+
+    background-color: #FFFFFF;
     opacity: 80%;
+
+    padding: 1rem;
+
     box-shadow: 0 0 5px #434343;
+
+    margin: 2rem auto;
 }
 
 h1,
 h2,
 h3 {
-    text-align: center;
     display: block;
+
     width: 100%;
+
+    text-align: center;
 }
 
 /**
@@ -96,8 +114,9 @@ h3 {
  */
 
 form {
-    margin: 0 auto;
     display: block;
+
+    margin: 0 auto;
 }
 
 label {
@@ -107,9 +126,11 @@ label {
 input,
 textarea {
     display: block;
-    margin-bottom: 1em;
+
     border-radius: 5px;
     border: 1px solid #000000;
+
+    margin-bottom: 1em;
 }
 
 input {
