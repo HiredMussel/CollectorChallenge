@@ -30,12 +30,12 @@
             <?php
 
                 require_once 'Card.php';
+                require_once 'connectToDb.php';
 
                 /**
                  * Load card from database
                  */
-                $db = new PDO('mysql:host=db;dbname=collector_challenge', 'root', 'password');
-                $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                $db = connectToDb();
 
                 $query = $db->prepare('SELECT `title`,`genre`,`completion`,`description` FROM `games`;');
                 $query->execute();

@@ -47,12 +47,14 @@
             </form>
 
             <?php
+                require_once 'connectToDb.php';
+
                 /**
                  * Logic to allow the result of the form to be added to the database
                  */
+
                 if (isset($_POST['title'])) {
-                    $db = new PDO('mysql:host=db;dbname=collector_challenge', 'root', 'password');
-                    $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                    $db = connectToDb();
 
                     $query = $db->prepare('INSERT INTO `games` (`title`, `genre`, `completion`, `description`)
                                             VALUES (:title, :genre, :completion, :description);');
