@@ -6,7 +6,8 @@ require_once 'connectToDb.php';
 /**
  * Function to save the information to construct a card to a database
  * 
- * 
+ * Has no return type, instead saving passed information to a DB
+ * Because this function interacts with the database, it is not unit tested.
  */
 function saveCard(Array $cardToSave) {
     /**

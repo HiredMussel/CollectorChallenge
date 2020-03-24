@@ -29,31 +29,14 @@
 
             <?php
 
-                require_once 'Card.php';
+                require_once 'card.php';
                 require_once 'connectToDb.php';
+                require_once 'loadCards.php';
 
                 /**
                  * Load card from database
                  */
-                $db = connectToDb();
-
-                $query = $db->prepare('SELECT `title`,`genre`,`completion`,`description` FROM `games`;');
-                $query->execute();
-
-                $result = $query->fetchAll();
-
-                /**
-                 * parse the return from the database into a card
-                 */
-                foreach ($result as $entry) {
-                    $cardTitle = $entry['title'];
-                    unset($entry['title']);
-                    if (isset($entry['completion'])) {
-                        $entry['completion'] .= '%';
-                    }
-                    $card = new Card($cardTitle, $entry);
-                    echo $card->printCard();
-                }
+                echo loadCards();
             ?>
 
         </div>
