@@ -22,13 +22,13 @@
         <h2>Add new game:</h2>
 
         <form method="post" id="newGame">
-            <label for="title">Game Title:</title>
+            <label for="title">Game Title:</label>
             <input type="text" id="title" name="title" required>
-            <label for="genre">Genre:</title>
+            <label for="genre">Genre:</label>
             <input type="text" id="genre" name="genre">
-            <label for="completion">Completion:</title>
+            <label for="completion">Completion:</label>
             <input type="number" min="0" max="255" id="completion" name="completion" value="0" required>%<br>
-            <label for="description">Description:</title>
+            <label for="description">Description:</label>
             <textarea id="description" name="description"></textarea>
             <input type="submit" id="submit" name="submit">
         </form>
