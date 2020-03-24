@@ -11,7 +11,7 @@
 
         <div class=links>
             <!-- Link goes nowhere for now, but will eventually link to the "add game" functionality -->
-            <a href="#">Dummy Link</a>
+            <a href="curate.php">Curate Collection</a>
         </div>
 
     </nav>
