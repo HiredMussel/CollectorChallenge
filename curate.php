@@ -11,7 +11,7 @@
 
         <div class=links>
             <!-- Link back to homepage -->
-            <a href="curate.php">View Collection</a>
+            <a href="index.php">View Collection</a>
         </div>
 
     </nav>
