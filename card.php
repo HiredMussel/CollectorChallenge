@@ -31,17 +31,22 @@ class Card
     /** 
      * Function to print the cards to the page. Since all the cards will have the same styling, all that is necessary is to
      * assign a class to the containing div for the purposes of CSS styling.
+     * 
+     * @return String HTML defining the card for rendering on the website
      */
-    public function printCard()
+    public function printCard() : String
     {
-        echo '<div class=itemCard>';
-        echo '<h1>' . $this->title . '</h1>';
+        $return = '';
+        $return .= '<div class="itemCard">';
+        $return .= ('<h1>' . $this->title . '</h1>');
         foreach($this->attribs as $attrib => $desc)
         {
-            echo '<h2>' . $attrib . '</h2>';
-            echo '<p>' . $desc . '</p>';
+            $return .= '<h2>' . $attrib . '</h2>';
+            $return .= '<p>' . $desc . '</p>';
         }
-        echo '</div>';
+        $return .= '</div>';
+
+        return $return;
     }
 
     /**

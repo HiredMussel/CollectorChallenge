@@ -49,7 +49,7 @@
                     $entry['completion'] .= '%';
                 }
                 $card = new Card($cardTitle, $entry);
-                $card->printCard();
+                echo $card->printCard();
             }
         ?>
 
