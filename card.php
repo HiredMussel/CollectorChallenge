@@ -4,7 +4,7 @@
  * Object for storing an individual collected item as an 'Item Card'
  * 
  * @property $title String the name of the item
- * @property $attribs Array an array of strings storing the item's attributes
+ * @property $attribs Array an array of Strings storing the item's attributes
  * 
  * @method __construct(String $title, Array $attribs) initialise the card with the title $title and array of attributes $attribs
  * 
@@ -65,7 +65,7 @@ class Card
     /**
      * Getters and setters for the item's other attributes
      */
-    public function getAttrib (String $attribName)
+    public function getAttrib (String $attribName) : String
     {
         return $this->attribs[$attribName];
     }
@@ -75,7 +75,7 @@ class Card
         $this->attribs[$attribName] = $attribValue;
     }
 
-    public function getAttribs ()
+    public function getAttribs () : Array
     {
         return $this->attribs;
     }
