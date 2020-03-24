@@ -47,23 +47,14 @@
             </form>
 
             <?php
-                require_once 'connectToDb.php';
+                require_once 'saveCard.php';
 
                 /**
                  * Logic to allow the result of the form to be added to the database
                  */
 
                 if (isset($_POST['title'])) {
-                    $db = connectToDb();
-
-                    $query = $db->prepare('INSERT INTO `games` (`title`, `genre`, `completion`, `description`)
-                                            VALUES (:title, :genre, :completion, :description);');
-
-                    $query->bindParam(':title', $_POST['title']);
-                    $query->bindParam(':genre', $_POST['genre']);
-                    $query->bindParam(':completion', $_POST['completion']);
-                    $query->bindParam(':description', $_POST['description']);
-                    $query->execute();
+                    saveCard($_POST);
 
                     echo '<h3>Game Added!</h3>';
                 }
