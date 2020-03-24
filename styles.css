@@ -1,0 +1,147 @@
+/**
+ * Set font size to 10px for easy maths with rems at default browser font size
+ */
+
+html {
+    font-size: 62.5%;
+}
+
+/**
+ * Body Styling
+ *
+ * Basic grey background for now
+ */
+
+body {
+    background-color: #999999;
+
+    font-family: sans-serif;
+}
+
+/**
+ * Navbar
+ * 
+ * Only one link for now so no responsiveness needed yet
+ */
+nav {
+    background-color: #111111;
+
+    padding: 1.2rem;
+
+    overflow: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #AEAEAE;
+    font-size: 1.4rem;
+
+    float: right;
+}
+
+nav a:hover,
+nav a:active {
+    color: #FFFFFF;
+}
+
+/**
+ * Container class to centre main page content
+ */
+.container {
+    display: flex;
+
+    margin: 2.4rem auto;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/**
+ * Items are displayed in item cards. Flexbox is used for easy responsiveness
+ * 300px width is enough to display properly on all devices included in Chrome's responsive device view
+ */
+.itemCard {
+    box-sizing: border-box;
+    width: 30rem;
+
+    background-color: #FFFFFF;
+    opacity: 80%;
+
+    padding: 1rem;
+
+    box-shadow: 0 0 5px #434343;
+
+    margin: 2rem 0.5rem;
+
+}
+
+.itemCard h1,
+.itemCard h2 {
+    text-transform: capitalize;
+}
+
+/**
+ * Styling for the curation page. Similar style should be used to the page displaying the items
+ */
+.curatePage {
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 100rem;
+
+    background-color: #FFFFFF;
+    opacity: 80%;
+
+    padding: 1rem;
+
+    box-shadow: 0 0 5px #434343;
+
+    margin: 2rem auto;
+}
+
+h1,
+h2,
+h3 {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+/**
+ * Styling for input form for new items
+ */
+
+form {
+    display: block;
+
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 2em;
+}
+
+input,
+textarea {
+    display: block;
+
+    border-radius: 5px;
+    border: 1px solid #000000;
+
+    margin-bottom: 1em;
+}
+
+input {
+    width: auto;
+}
+
+#completion {
+    display: inline-block;
+}
+
+textarea {
+    width: 30rem;
+    height: 10rem;
+}
