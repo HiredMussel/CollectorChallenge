@@ -70,6 +70,12 @@ h2 {
     width: 100%;
 }
 
+h3 {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
 form {
     margin: 0 auto;
     display: block;

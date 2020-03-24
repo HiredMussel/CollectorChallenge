@@ -32,7 +32,6 @@
             <textarea id="description" name="description"></textarea>
             <input type="submit" id="submit" name="submit">
         </form>
-    </div>
     <?php
         // Logic to allow the result of the form to be added to the database
         if (isset($_POST['title'])) {
@@ -47,6 +46,9 @@
             $query->bindParam(':completion', $_POST['completion']);
             $query->bindParam(':description', $_POST['description']);
             $query->execute();
+
+            echo '<h3>Game Added!</h3>';
         }
     ?>
+    </div>
 </body>
