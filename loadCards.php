@@ -22,14 +22,20 @@ function loadCards() : String {
      * parse the return from the database into a card
      */
     foreach ($result as $entry) {
-        $cardTitle = $entry['title'];
-        unset($entry['title']);
-        if (isset($entry['completion'])) {
-            $entry['completion'] .= '%';
-        }
-        $card = new Card($cardTitle, $entry);
-        $return .= $card->printCard();
+        /**
+         * A new card is valid if it has a title set. If the card has a title, it can then be echoed (possibly with null values)
+         * Otherwise it is not valid and is therefore not returned
+         * 
+         * If there are no valid cards in the database, this function will return the empty string.
+         */
+            $cardTitle = $entry['title'];
+            unset($entry['title']);
+            if (isset($entry['completion'])) {
+                $entry['completion'] .= '%';
+            }
+            $card = new Card($cardTitle, $entry);
+            $return .= $card->printCard();
     }
-    
+
     return $return;
 }
