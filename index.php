@@ -1,58 +1,63 @@
-<head>
+ <html lang="en-GB">
+ 
+    <head>
 
-    <title>My Games</title>
+        <title>My Games</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="normalise.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="normalise.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <nav>
+        <nav>
 
-        <div class=links>
+            <div class=links>
 
-            <!-- Link takes the user to an input form where they can add details of a new game -->
-            <a href="curate.php">Curate Collection</a>
+                <!-- Link takes the user to an input form where they can add details of a new game -->
+                <a href="curate.php">Curate Collection</a>
+
+            </div>
+
+        </nav>
+
+        <div class="container">
+
+            <?php
+
+                require_once 'Card.php';
+
+                /**
+                 * Load card from database
+                 */
+                $db = new PDO('mysql:host=db;dbname=collector_challenge', 'root', 'password');
+                $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+                $query = $db->prepare('SELECT `title`,`genre`,`completion`,`description` FROM `games`;');
+                $query->execute();
+
+                $result = $query->fetchAll();
+
+                /**
+                 * parse the return from the database into a card
+                 */
+                foreach ($result as $entry) {
+                    $cardTitle = $entry['title'];
+                    unset($entry['title']);
+                    if (isset($entry['completion'])) {
+                        $entry['completion'] .= '%';
+                    }
+                    $card = new Card($cardTitle, $entry);
+                    echo $card->printCard();
+                }
+            ?>
 
         </div>
 
-    </nav>
+    </body>
 
-    <div class="container">
-
-        <?php
-
-            require_once 'Card.php';
-
-            /**
-             * Load card from database
-             */
-            $db = new PDO('mysql:host=db;dbname=collector_challenge', 'root', 'password');
-            $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-            $query = $db->prepare('SELECT `title`,`genre`,`completion`,`description` FROM `games`;');
-            $query->execute();
-
-            $result = $query->fetchAll();
-
-            /**
-             * parse the return from the database into a card
-             */
-            foreach ($result as $entry) {
-                $cardTitle = $entry['title'];
-                unset($entry['title']);
-                if (isset($entry['completion'])) {
-                    $entry['completion'] .= '%';
-                }
-                $card = new Card($cardTitle, $entry);
-                echo $card->printCard();
-            }
-        ?>
-
-    </div>
-
-</body>
+</html>
