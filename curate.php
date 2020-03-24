@@ -10,8 +10,8 @@
     <nav>
 
         <div class=links>
-            <!-- Link goes nowhere for now, but will eventually link to the "add game" functionality -->
-            <a href="curate.php">Curate Collection</a>
+            <!-- Link back to homepage -->
+            <a href="curate.php">View Collection</a>
         </div>
 
     </nav>
