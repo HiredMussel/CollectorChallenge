@@ -18,51 +18,22 @@
             <div class=links>
                 <!-- Link back to homepage -->
                 <a href="index.php">View Collection</a>
+                <!-- Link to return to curation section -->
+                <a href="curate.php">Curate Collection</a>
             </div>
 
         </nav>
 
         <div class="curatePage container">
             <h1>Curate Collection</h1>
-            <!-- Declaration of form to add items to db. Items have fields for title, genre, completion, and description -->
+            <!-- Declaration of form to edit items within db. Form structure is defined in printEditForm.php -->
 
-            <h2>Add new game:</h2>
-
-            <form method="post" id="newGame">
-
-                <label for="title">Game Title:</label>
-                <input type="text" id="title" name="title" required>
-
-                <label for="genre">Genre:</label>
-                <input type="text" id="genre" name="genre">
-
-                <label for="completion">Completion:</label>
-                <input type="number" min="0" max="255" id="completion" name="completion" value="0" required>%<br>
-
-                <label for="description">Description:</label>
-                <textarea id="description" name="description"></textarea>
-
-                <input type="submit" id="submit" name="submit">
-
-            </form>
+            <h2>Edit Game:</h2>
 
             <?php
-                require_once 'saveCard.php';
-                require_once 'listEditable.php';
+                require_once 'printEditForm.php';
 
-                /**
-                 * Logic to allow the result of the form to be added to the database
-                 */
-
-                if (isset($_POST['title'])) {
-                    saveCard($_POST);
-
-                    echo '<h3>Game Added!</h3>';
-                }
-
-                echo '<h2> Edit your Games:</h2>';
-
-                echo listEditable();
+                echo printEditForm();
             ?>
 
         </div>

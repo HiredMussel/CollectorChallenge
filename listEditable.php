@@ -22,7 +22,8 @@ function listEditable() : String {
 
     foreach ($result as $game) {
         $return .=     '<div class=editGame>'
-                         . '<form method="get"><input class="hidden" type="number" value="' . $game['id'] . '" id="gameId" name="gameId" action="#">'
+                         . '<form method="get" action="./editEntry.php">'
+                             . '<input class="hidden" type="number" value="' . $game['id'] . '" id="gameId" name="gameId">'
                              . '<h3>'. $game['title'] . '</h3>'
                              . '<input class="editButton" type="submit" value="Edit">' 
                          . '</form>'
