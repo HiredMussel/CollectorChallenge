@@ -13,7 +13,7 @@ require_once 'connectToDb.php';
 function listEditable() : String {
     $db = connectToDb();
 
-    $query = $db->prepare('SELECT `id`, `title` FROM `games`;');
+    $query = $db->prepare('SELECT `id`, `title` FROM `games` WHERE `is_deleted`=0;');
     $query->execute();
 
     $result = $query->fetchAll();
@@ -25,7 +25,11 @@ function listEditable() : String {
                          . '<form method="get" action="./editEntry.php">'
                              . '<input class="hidden" type="number" value="' . $game['id'] . '" id="gameId" name="gameId">'
                              . '<h3>'. $game['title'] . '</h3>'
-                             . '<input class="editButton" type="submit" value="Edit">' 
+                             . '<input class="editButton" type="submit" value="Edit">'
+                         . '</form>'
+                         . '<form method="get" action="./deleteItem.php">'
+                            . '<input class="hidden" type="number" value="' . $game['id'] . '" id="gameId" name="gameId">'
+                            . '<input class="deleteButton" type="submit" value="Delete">'
                          . '</form>'
                      . '</div>';
     }

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This is a .php page which saves the submitted edits to the database and then returns the user to the curate.php page
+ */
+
 require_once 'connectToDb.php';
 
 if (isset($_POST['title'])) {

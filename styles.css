@@ -156,6 +156,10 @@ textarea {
  * Game to edit is identified using a hidden element of the form which should not be changed
  */
 
+ form {
+     display: inline-block;
+ }
+
  .editGame {
      width: 100%;
 
@@ -167,7 +171,8 @@ textarea {
  }
 
  .editGame h3,
- .editButton {
+ .editButton,
+ .deleteButton {
     display: inline-block;
 
     width: auto;
