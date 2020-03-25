@@ -48,6 +48,7 @@
 
             <?php
                 require_once 'saveCard.php';
+                require_once 'listEditable.php';
 
                 /**
                  * Logic to allow the result of the form to be added to the database
@@ -58,6 +59,10 @@
 
                     echo '<h3>Game Added!</h3>';
                 }
+
+                echo '<h2> Edit your Games:</h2>';
+
+                echo listEditable();
             ?>
 
         </div>
