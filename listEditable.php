@@ -8,10 +8,11 @@ require_once 'connectToDb.php';
  * Because the function interacts with a database, it is not unit testable. However, anecdotal testing indicates that it
  * functions as intended
  * 
+ * @param $db PDO an instantiated connection to the database
+ * 
  * @return String a list of entries allowing each item in the db to be edited
  */
-function listEditable() : String {
-    $db = connectToDb();
+function listEditable(PDO $db) : String {
 
     $query = $db->prepare('SELECT `id`, `title` FROM `games` WHERE `is_deleted`=0;');
     $query->execute();
