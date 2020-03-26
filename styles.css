@@ -36,6 +36,8 @@ nav a {
     color: #AEAEAE;
     font-size: 1.4rem;
 
+    padding-left: 1em;
+
     float: right;
 }
 
@@ -97,6 +99,8 @@ nav a:active {
     box-shadow: 0 0 5px #434343;
 
     margin: 2rem auto;
+
+    align-items: center;
 }
 
 h1,
@@ -145,3 +149,33 @@ textarea {
     width: 30rem;
     height: 10rem;
 }
+
+/**
+ * Styling for Edit section
+ * 
+ * Game to edit is identified using a hidden element of the form which should not be changed
+ */
+
+ form {
+     display: inline-block;
+ }
+
+ .editGame {
+     width: 100%;
+
+     text-align: center;
+ }
+
+ .hidden {
+     display: none;
+ }
+
+ .editGame h3,
+ .editButton,
+ .deleteButton {
+    display: inline-block;
+
+    width: auto;
+
+    margin: 1em;
+ }

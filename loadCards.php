@@ -13,7 +13,7 @@ function loadCards() : String {
 
     $db = connectToDb();
 
-    $query = $db->prepare('SELECT `title`,`genre`,`completion`,`description` FROM `games`;');
+    $query = $db->prepare('SELECT `title`,`genre`,`completion`,`description` FROM `games` WHERE `is_deleted`=0;');
     $query->execute();
 
     $result = $query->fetchAll();

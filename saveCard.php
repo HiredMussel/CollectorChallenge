@@ -8,13 +8,15 @@ require_once 'connectToDb.php';
  * 
  * Has no return type, instead saving passed information to a DB
  * Because this function interacts with the database, it is not unit tested.
+ * 
+ * @param $cardToSave Array containing the information about the game which will be saved to the database
+ * @param $db PDO an active connection to the database
  */
-function saveCard(Array $cardToSave) {
+function saveCard(Array $cardToSave, PDO $db) {
     /**
      * If a title is not set then this function will fail with exception TypeError::class due to the constructor for a new card
      * being passed NULL
      */
-    $db = connectToDb();
 
     $query = $db->prepare('INSERT INTO `games` (`title`, `genre`, `completion`, `description`)
                                             VALUES (:title, :genre, :completion, :description);');

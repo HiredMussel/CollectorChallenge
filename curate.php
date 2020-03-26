@@ -48,16 +48,23 @@
 
             <?php
                 require_once 'saveCard.php';
+                require_once 'listEditable.php';
+
+                $db=connectToDb();
 
                 /**
                  * Logic to allow the result of the form to be added to the database
                  */
 
                 if (isset($_POST['title'])) {
-                    saveCard($_POST);
+                    saveCard($_POST, $db);
 
                     echo '<h3>Game Added!</h3>';
                 }
+
+                echo '<h2> Edit your Games:</h2>';
+
+                echo listEditable($db);
             ?>
 
         </div>

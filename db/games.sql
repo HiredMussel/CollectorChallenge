@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.29)
 # Database: collector_challenge
-# Generation Time: 2020-03-23 15:20:00 +0000
+# Generation Time: 2020-03-25 11:44:37 +0000
 # ************************************************************
 
 
@@ -31,15 +31,21 @@ CREATE TABLE `games` (
   `description` varchar(500) DEFAULT NULL,
   `completion` tinyint(3) DEFAULT NULL,
   `genre` varchar(20) DEFAULT NULL,
+  `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `games` WRITE;
 /*!40000 ALTER TABLE `games` DISABLE KEYS */;
 
-INSERT INTO `games` (`id`, `title`, `description`, `completion`, `genre`)
+INSERT INTO `games` (`id`, `title`, `description`, `completion`, `genre`, `is_deleted`)
 VALUES
-	(1,'TestGame','This is a test description',100,'Adventure');
+	(1,'Test Game','This is a test description to see whether the update scripting is working properly',100,'Adventure',0),
+	(2,'Testistar!','This is also a test description',0,'Mystery',0),
+	(3,'Test Game 3','This game was a test game which was never finished, and exists only to make sure that databases are responding correctly.',52,'Testing',0),
+	(23,'Test Game 3','This game was also never finished',0,'Tested Game',0),
+	(24,'This is a Test','Yay, more games added to the database to test functionality!',69,'Action Adventure',0),
+	(25,'Further Testing','Nope',0,'Nope',1);
 
 /*!40000 ALTER TABLE `games` ENABLE KEYS */;
 UNLOCK TABLES;
